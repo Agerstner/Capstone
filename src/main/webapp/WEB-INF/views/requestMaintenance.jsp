@@ -114,6 +114,30 @@
 									</select>
 								</div>
 							</div>
+							
+							
+							<c:choose >							
+							
+								<c:when test="${param.type == 'Electrical'}">
+									<input type="hidden" name="priority" value="High">
+								</c:when>
+								
+								<c:when test="${param.type == 'Plumbing'}">
+									<input type="hidden" name="priority" value="High">
+								</c:when>
+							
+								<c:when test="${param.type == 'Physical Damage'}">
+									<input type="hidden" name="priority" value="Low">
+								</c:when>
+								
+							</c:choose>
+							
+							<!-- 	<input type="hidden" id="priority" name="priority" value=> -->
+
+<!--   							<div class="form-group"> -->
+<!--     								<label for="exampleFormControlTextarea1">Example textarea</label> -->
+<!--    									 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+<!--  							 </div> -->
 
 							<input type="hidden" id="user" name="user"
 								value="${loggedInUser.firstname} ${loggedInUser.lastname}">
@@ -121,12 +145,7 @@
 							<input type="hidden" id="location" name="location"
 								value="${loggedInUser.address}">
 
-							<!-- 	<input type="hidden" id="priority" name="priority" value=> -->
-
-<!--   							<div class="form-group"> -->
-<!--     								<label for="exampleFormControlTextarea1">Example textarea</label> -->
-<!--    									 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
-<!--  							 </div> -->
+							
 
 							<div class="control-group ${hidden}">
 								<label class="control-label" for="details">Details*</label>
