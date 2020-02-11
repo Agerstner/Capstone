@@ -46,13 +46,6 @@
 	href="ico/apple-touch-icon-57-precomposed.png" />
 <link rel="shortcut icon" href="ico/favicon.png" />
 
-<script>
-
-	function submitForm(e) {
-		
-	}
-	
-</script>
 
 </head>
 
